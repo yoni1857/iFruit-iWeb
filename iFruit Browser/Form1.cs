@@ -24,7 +24,11 @@ namespace iFruit_Browser
 
         private void txtURL_KeyDown(object sender, KeyEventArgs e)
         {
-            wb.Navigate(txtURL.Text);
+            if (txtURL.Focused)
+            {
+                wb.Navigate(txtURL.Text);
+            }
+           
         }
 
         private void btnForward_Click(object sender, EventArgs e)
